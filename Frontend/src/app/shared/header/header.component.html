@@ -1,0 +1,25 @@
+<header class="navbar">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a class="navbar-brand" (click)="home()">Golden Website</a>
+      <nav>
+        <ul class="nav-list d-flex">
+          <li *ngIf="role === 'admin' || role === 'eleveur'">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li *ngIf="role === 'admin' || role === 'eleveur'">
+            <a class="nav-link" href="#">Manage Dogs</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li *ngIf="role === 'admin' || role === 'eleveur'">
+            <a class="nav-link" (click)="navigateToLogs()">Logs</a>
+          </li>
+          <li>
+            <button class="btn-logout" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  

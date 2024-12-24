@@ -1,0 +1,66 @@
+  /* Header Styling */
+  header.navbar {
+    background-color: #e6d5b8; /* Beige clair */
+    padding: 10px 20px;
+    border-bottom: 2px solid #d4c4a8;
+  }
+  
+  header .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5c4a1a; /* Marron */
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  header .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+  }
+  
+  header .nav-link {
+    text-decoration: none;
+    color: #5c4a1a; /* Marron */
+    font-size: 1rem;
+    padding: 5px 15px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header .nav-link:hover {
+    background-color: #d4c4a8; /* Marron clair */
+    color: #000;
+    border-radius: 5px;
+  }
+  
+  header .btn-logout {
+    background-color: #b6895c; /* Marron orangé */
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  header .btn-logout:hover {
+    background-color: #a0764b; /* Marron plus foncé */
+  }
+
+  .nav-link {
+    cursor: pointer;
+    color: #6d4c41; /* Assurez-vous que la couleur est visible */
+  }
+  /* Espacement entre les éléments de la liste */
+.nav-list {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list li {
+  margin: 0;
+}

@@ -1,42 +1,45 @@
 <div class="d-flex flex-column min-vh-100">
   <!-- Header -->
-  <header class="navbar">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-      <a class="navbar-brand" href="#">Golden Website</a>
-      <nav>
-        <ul class="nav-list d-flex">
-          <!-- Admin & Eleveur Links -->
-          <li *ngIf="role === 'admin' || role === 'eleveur'">
-            <a class="nav-link" href="#">Dashboard</a>
-          </li>
-          <li *ngIf="role === 'admin' || role === 'eleveur'">
-            <a class="nav-link" href="#">Manage Dogs</a>
-          </li>
-          <!-- Commun Links -->
-          <li>
-            <a class="nav-link" href="#">Profile</a>
-          </li>
-          <!-- Logout -->
-          <li>
-            <button class="btn-logout" (click)="logout()">Logout</button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <app-header></app-header>
 
   <!-- Main Content -->
   <main class="container my-5 flex-grow-1">
-    <h1>Bienvenue sur la page principale</h1>
-    <p>Explorez les fonctionnalités selon votre rôle : <span class="role">{{ role }}</span></p>
+    <h1 class="text-center mb-4">Bienvenue sur Golden Website</h1>
+    <p class="text-center mb-4">
+      Découvrez les fonctionnalités disponibles selon votre rôle : <strong>{{ role }}</strong>
+    </p>
+
+    <div class="features-list">
+      <h2 class="text-center mb-4">Vos fonctionnalités</h2>
+      <ul class="list-group">
+        <li *ngIf="role === 'admin'" class="list-group-item">
+          Gestion des utilisateurs : Ajouter, modifier ou supprimer des utilisateurs.
+        </li>
+        <li *ngIf="role === 'admin'" class="list-group-item">
+          Voir et gérer les logs d'activité.
+        </li>
+        <li *ngIf="role === 'admin'" class="list-group-item">
+          Gérer les autorisations et la configuration du site.
+        </li>
+        <li *ngIf="role === 'eleveur'" class="list-group-item">
+          Ajouter et gérer les profils des chiens.
+        </li>
+        <li *ngIf="role === 'eleveur'" class="list-group-item">
+          Répondre aux demandes des clients et suivre les portées.
+        </li>
+        <li *ngIf="role === 'client'" class="list-group-item">
+          Voir les profils de chiens disponibles et contacter les éleveurs.
+        </li>
+        <li *ngIf="role === 'client'" class="list-group-item">
+          Suivre l'état de vos demandes d'adoption.
+        </li>
+        <li *ngIf="role === 'invité'" class="list-group-item">
+          Explorez le site en mode découverte et inscrivez-vous pour plus de fonctionnalités.
+        </li>
+      </ul>
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="footer bg-footer text-white py-3 mt-auto">
-    <div class="container text-center">
-      <div>© 2024 Golden Website. Tous droits réservés.</div>
-      <div>Connecté en tant que : <strong class="role">{{ role }}</strong></div>
-      <div><a href="#" class="contact-link">Contactez le support</a></div>
-    </div>
-  </footer>
+  <app-footer></app-footer>
 </div>

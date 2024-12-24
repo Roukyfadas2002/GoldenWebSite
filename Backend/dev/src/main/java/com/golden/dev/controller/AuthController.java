@@ -114,4 +114,10 @@ public class AuthController {
 
         return ResponseEntity.ok(Map.of("message", "Utilisateur enregistré avec succès !"));
     }
+
+    @GetMapping("/logs")
+    public ResponseEntity<?> getAllLogs() {
+    return ResponseEntity.ok(authLogRepository.findAll());
+}
+
 }

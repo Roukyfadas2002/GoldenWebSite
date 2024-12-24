@@ -1,0 +1,17 @@
+  /* Footer Styling */
+footer.footer {
+    background-color: #5c4a1a; /* Marron foncé */
+    color: #f9f6f1; /* Blanc cassé */
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  footer .contact-link {
+    color: #d4c4a8; /* Beige clair */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer .contact-link:hover {
+    color: #b6895c; /* Marron orangé */
+  }

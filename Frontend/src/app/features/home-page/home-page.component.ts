@@ -1,44 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../core/services/auth.service';
-import { Router } from '@angular/router'; // Importer Router pour la redirection
+import { HeaderComponent } from "../../shared/header/header.component";
+import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent, FooterComponent],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  role: string = 'Invité'; // Valeur par défaut
+  role: string = 'invité'; // Valeur par défaut
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.loadUserRole();
   }
 
   /**
-   * Charge le rôle de l'utilisateur depuis AuthService.
+   * Charge le rôle de l'utilisateur depuis le service AuthService.
    */
   private loadUserRole(): void {
-    this.role = this.authService.getRole(); // Récupère le rôle depuis le service
-    console.log('Rôle récupéré :', this.role);
+    this.role = this.authService.getRole();
+    console.log('Rôle utilisateur chargé :', this.role);
 
-    if (!this.role || this.role === 'Invité') {
-      console.warn(
-        'Aucun rôle défini ou utilisateur non connecté. Défini par défaut à "Invité".'
-      );
+    if (!this.role) {
+      this.role = 'invité';
+      console.warn('Aucun rôle trouvé. Défaut : Invité.');
     }
-  }
-
-  /**
-   * Déconnecte l'utilisateur.
-   */
-  logout(): void {
-    this.authService.setRole(''); // Réinitialise le rôle dans AuthService
-    console.log('Utilisateur déconnecté.');
-    this.router.navigate(['/']); // Redirige vers la page de connexion ou d'accueil
   }
 }
