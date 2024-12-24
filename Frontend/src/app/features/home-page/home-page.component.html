@@ -1,0 +1,42 @@
+<div class="d-flex flex-column min-vh-100">
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <a class="navbar-brand" href="#">Golden Website</a>
+      <nav>
+        <ul class="nav-list d-flex">
+          <!-- Admin & Eleveur Links -->
+          <li *ngIf="role === 'admin' || role === 'eleveur'">
+            <a class="nav-link" href="#">Dashboard</a>
+          </li>
+          <li *ngIf="role === 'admin' || role === 'eleveur'">
+            <a class="nav-link" href="#">Manage Dogs</a>
+          </li>
+          <!-- Commun Links -->
+          <li>
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <!-- Logout -->
+          <li>
+            <button class="btn-logout" (click)="logout()">Logout</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5 flex-grow-1">
+    <h1>Bienvenue sur la page principale</h1>
+    <p>Explorez les fonctionnalités selon votre rôle : <span class="role">{{ role }}</span></p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-footer text-white py-3 mt-auto">
+    <div class="container text-center">
+      <div>© 2024 Golden Website. Tous droits réservés.</div>
+      <div>Connecté en tant que : <strong class="role">{{ role }}</strong></div>
+      <div><a href="#" class="contact-link">Contactez le support</a></div>
+    </div>
+  </footer>
+</div>

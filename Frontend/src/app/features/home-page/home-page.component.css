@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f5ec; /* Fond doux beige */
+  color: #4a4a4a; /* Texte gris foncé */
+}
+
+/* Header Styling */
+header.navbar {
+  background-color: #e6d5b8; /* Beige clair */
+  padding: 10px 20px;
+  border-bottom: 2px solid #d4c4a8;
+}
+
+header .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5c4a1a; /* Marron */
+  text-transform: uppercase;
+}
+
+header .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+}
+
+header .nav-link {
+  text-decoration: none;
+  color: #5c4a1a; /* Marron */
+  font-size: 1rem;
+  padding: 5px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header .nav-link:hover {
+  background-color: #d4c4a8; /* Marron clair */
+  color: #000;
+  border-radius: 5px;
+}
+
+header .btn-logout {
+  background-color: #b6895c; /* Marron orangé */
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+header .btn-logout:hover {
+  background-color: #a0764b; /* Marron plus foncé */
+}
+
+/* Main Content */
+main {
+  text-align: center;
+}
+
+main h1 {
+  color: #5c4a1a; /* Marron */
+  font-size: 2.5rem;
+}
+
+main p {
+  font-size: 1.2rem;
+  color: #7a6e5b; /* Marron clair */
+}
+
+main .role {
+  color: #b6895c;
+  font-weight: bold;
+}
+
+/* Footer Styling */
+footer.footer {
+  background-color: #5c4a1a; /* Marron foncé */
+  color: #f9f6f1; /* Blanc cassé */
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer .contact-link {
+  color: #d4c4a8; /* Beige clair */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer .contact-link:hover {
+  color: #b6895c; /* Marron orangé */
+}

@@ -1,0 +1,67 @@
+/* Corps global */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF0D7; /* Beige doux */
+    margin: 0;
+    padding: 0;
+    color: #3E2723; /* Marron foncé */
+  }
+  
+  /* Style des boutons */
+  button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+  }
+  
+  button.btn-primary {
+    background-color: #F4C430; /* Doré intense */
+    color: #FFFFFF; /* Blanc éclatant */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  button.btn-primary:hover {
+    background-color: #E5AF2F; /* Doré légèrement foncé */
+    transform: translateY(-2px);
+  }
+  
+  button.btn-secondary {
+    background-color: #8B4513; /* Marron clair */
+    color: #FFFFFF; /* Blanc éclatant */
+  }
+  
+  button.btn-secondary:hover {
+    background-color: #6A3311; /* Marron plus foncé */
+    transform: translateY(-2px);
+  }
+  
+  /* Style des formulaires */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #F4C430; /* Doré */
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #E5AF2F; /* Doré foncé */
+  }
+  
+  /* Labels */
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+    color: #3E2723; /* Marron foncé */
+  }
+  

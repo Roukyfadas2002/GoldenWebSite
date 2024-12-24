@@ -1,0 +1,17 @@
+/* Style pour la page d'accueil */
+.home-page {
+  text-align: center;
+  padding: 50px;
+}
+
+.home-page h1 {
+  font-size: 36px;
+  color: #F4C430; /* Doré intense */
+  margin-bottom: 20px;
+}
+
+.home-page p {
+  font-size: 18px;
+  color: #3E2723; /* Marron foncé */
+  margin-bottom: 40px;
+}

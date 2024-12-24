@@ -1,0 +1,8 @@
+<div class="home-page">
+    <h1>Bienvenue sur Golden Retriever Inventory</h1>
+    <p>Gérez vos activités avec élégance et efficacité.</p>
+    <button (click)="openLoginDialog()" class="btn btn-primary">Se connecter</button>
+  </div>
+  
+  <app-login-dialog *ngIf="showLoginDialog" (close)="closeLoginDialog()"></app-login-dialog>
+  
